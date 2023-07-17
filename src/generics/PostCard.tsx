@@ -91,7 +91,7 @@ export default function PostCard({ post, socialMedia, view }) {
                   ) : null}
                 </div>
               )}
-              <div className=" w-full flex  flex-col px-4 space-y-3 h-full  justify-between  ">
+              <div className=" w-full flex  flex-col px-4 space-y-2 h-full  justify-between  ">
                 <h1 className=" font-medium text-2xl text-slate-800 line-clamp-2">{post.title}</h1>
                 <p className=" font-normal text-slate-700 line-clamp-2">{post.description}</p>
                 <div className="  flex items-center  mt-auto gap-2 text-xs font-medium  ">
@@ -147,7 +147,7 @@ export default function PostCard({ post, socialMedia, view }) {
                 <p className=" line-clamp-4 text-slate-700 ">{post.description}</p>
                 <div className=" max-w-full   text-slate-800 ">
                   {post.content.type === "image" ? (
-                    <img src={post.content.src} alt="" className=" w-full h-full object-cover " />
+                    <img src={post.content.src} alt="" className=" w-full max-h-[400px] object-cover " />
                   ) : post.content.type === "youtube" ? (
                     post.content.link
                   ) : (

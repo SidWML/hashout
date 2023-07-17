@@ -6,7 +6,7 @@ export default function Login() {
   return (
     <div className="">
       <div className=" fixed w-full px-6 mx-auto p-4 flex items-center justify-between">
-        <Link className="max-w-[5%]" href="/">
+        <Link className="lg:max-w-[5%] max-w-[15%]" href="/">
           <img src="https://wmlit.com/Logo.png" alt="" className="" />
         </Link>
         <div className=" flex items-center space-x-4">
@@ -15,12 +15,12 @@ export default function Login() {
           </div>
         </div>
       </div>
-      <div className=" w-full grid grid-cols-2">
-        <div className=" max-w-full h-[100vh]">
+      <div className=" w-full grid grid-cols-2 h-[100vh] bg-white">
+        <div className=" max-w-full lg:block hidden ">
           <img src="/meme-3.jpg" alt="" className=" w-full h-full object-cover" />
         </div>
-        <div className=" col-span-1 bg-white flex flex-col items-center justify-center ">
-          <div className="  w-[60%] dark:bg-black text-black dark:text-white ">
+        <div className=" lg:col-span-1 col-span-2  flex flex-col items-center justify-center ">
+          <div className="  md:w-[60%] w-full dark:bg-black text-black dark:text-white ">
             <div className="w-full flex items-center justify-center  min-h-[90vh]  md:py-0 py-[60px]">
               <div className=" overflow-hidden    rounded-3xl  w-full ">
                 <div className="  p-6 space-y-8">
