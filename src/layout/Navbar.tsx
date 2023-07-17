@@ -284,11 +284,7 @@ export default function Navbar({ setSidebar, sidebar }) {
                     <div className=" w-full flex flex-col">
                       <Link href="" className=" py-2 space-x-2 border-[#E6F0F2] border-b">
                         {" "}
-                        <FontAwesomeIcon icon={faUser} /> <span>Account</span>{" "}
-                      </Link>
-                      <Link href="" className=" py-2 space-x-2 border-[#E6F0F2] border-b">
-                        {" "}
-                        <FontAwesomeIcon icon={faLock} /> <span>Privacy</span>{" "}
+                        <FontAwesomeIcon icon={faUser} /> <span>Profile</span>{" "}
                       </Link>
                       <Link href="" className=" py-2 space-x-2 border-[#E6F0F2] ">
                         {" "}

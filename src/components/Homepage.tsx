@@ -18,7 +18,7 @@ import {
   faList,
   faColumns,
 } from "@fortawesome/free-solid-svg-icons";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Button from "@/generics/Button";
 import { Popover, Transition } from "@headlessui/react";
@@ -128,6 +128,20 @@ export default function Homepage() {
     }
   };
 
+  const changeView = () => {
+    if(window.innerWidth <= 500){
+      setView("grid")
+    }else{
+      setView("list")
+    }
+  }
+
+  useEffect(() => {
+   window.addEventListener("resize", changeView);
+   () => window.removeEventListener("resize", changeView)
+  }, [])
+  
+
   const quickTabs = ["Best", "Hot", "Trending", "Top", "Rising"];
 
   return (
@@ -191,7 +205,7 @@ export default function Homepage() {
           </div>
         </div>
       </div>
-      <div className="  px-4 md:overflow-hidden overflow-x-scroll ">
+      <div className=" bg-white border border-gray-300 p-4 rounded-[10px] md:overflow-hidden overflow-x-scroll ">
         <div className=" flex items-center  min-w-[max-content] gap-2">
           <div className=" p-1 border w-[max-content] bg-gradient-to-r from-slate-100 backdrop-blur-md to-[#f5f5f5] rounded-[10px]">
             {quickTabs.map((tab, index) => (
