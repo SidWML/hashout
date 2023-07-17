@@ -191,7 +191,7 @@ export default function Homepage() {
           </div>
         </div>
       </div>
-      <div className="  px-4 ">
+      <div className="  px-4 md:overflow-hidden overflow-x-scroll ">
         <div className=" flex items-center  min-w-[max-content] gap-2">
           <div className=" p-1 border w-[max-content] bg-gradient-to-r from-slate-100 backdrop-blur-md to-[#f5f5f5] rounded-[10px]">
             {quickTabs.map((tab, index) => (

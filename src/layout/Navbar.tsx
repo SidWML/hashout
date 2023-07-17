@@ -1,3 +1,4 @@
+import { posts } from "@/libs/Posts";
 import { faBell } from "@fortawesome/free-regular-svg-icons";
 import {
   faSearch,
@@ -10,6 +11,7 @@ import {
   faFire,
   faUserGroup,
   faNewspaper,
+  faComment,
 } from "@fortawesome/free-solid-svg-icons";
 import { faChevronCircleDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -20,7 +22,7 @@ import React, { useState } from "react";
 
 export default function Navbar({ setSidebar, sidebar }) {
   const [searchbarDropdown, setsearchbarDropdown] = useState(false);
-  const [loggedIn, setLoggedIn] = useState(true);
+  const [loggedIn, setLoggedIn] = useState(false);
   const Notification = [
     {
       name: "Winnie Brewer",
@@ -145,10 +147,10 @@ export default function Navbar({ setSidebar, sidebar }) {
             className={` ${sidebar ? " translate-y-[-10px]  -rotate-45 " : " translate-y-0 "} duration-300 ease-out w-[35px] h-[3px] bg-black `}
           ></div>
         </div>
-        <div className=" lg:hidden block max-w-[10%]">
+        <div className=" lg:hidden block md:max-w-[10%] max-w-[20%]">
           <img src="https://wmlit.com/Logo.png" alt="" className="" />
         </div>
-        <div className=" lg:w-[60%] w-full md:block hidden relative ">
+        <div className=" lg:w-[65%] w-full md:block hidden relative ">
           <div className=" relative w-full   z-[888]">
             <input
               onClick={() => setsearchbarDropdown(!searchbarDropdown)}
@@ -165,31 +167,33 @@ export default function Navbar({ setSidebar, sidebar }) {
             >
               <div className="w-full space-y-6 bg-white p-6  ">
                 <div className="">
-                  <h1 className=" text-sm font-medium w-full flex items-center justify-between uppercase text-slate-400 mb-4 pl-6">
+                  <h1 className=" text-sm font-medium w-full flex items-center justify-between uppercase text-slate-400 mb-4 ">
                     {" "}
-                    <span className="">PEOPLE</span> <span className=" text-sky-500 cursor-pointer">View All</span>{" "}
+                    <span className="">TOP POSTS</span> <span className=" text-sky-500 cursor-pointer">View All</span>{" "}
                   </h1>
-                  <div className=" grid lg:grid-cols-6 md:grid-cols-3 gap-3  ">
-                    {search[0].peoples.map((item) => (
-                      <div className=" flex  space-y-2 items-center flex-col">
-                        <img src={item.avatar} alt="" className="" />
-                        <h1 className=" font-medium text-lg">{item.name}</h1>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <div className="">
-                  <h1 className=" text-sm font-medium uppercase flex items-center justify-between text-slate-400 mb-4 pl-6">
-                    {" "}
-                    <span className="">PAGES</span> <span className=" text-sky-500 cursor-pointer">View All</span>{" "}
-                  </h1>
-                  <div className=" grid lg:grid-cols-6 md:grid-cols-3 gap-3    ">
-                    {search[1].peoples.map((item) => (
-                      <div className=" flex min-w-[max-content] space-y-2 items-center flex-col">
-                        <img src={item.avatar} alt="" className="w-[60px] h-[60px] rounded-full" />
-                        <h1 className=" font-medium text-sm">{item.name}</h1>
-                      </div>
-                    ))}
+                  <div className=" flex flex-col   ">
+                    {posts
+                      .filter((filterpost, index) => index <= 3)
+                      .map((post) => (
+                        <div className=" flex gap-2 items-start p-4 border space-y-2 ">
+                          {post.content.type === "image" ? (
+                            <div className=" min-w-[80px] mt-3 max-w-[80px] h-[80px]">
+                              <img src={post.content.src} alt="" className=" w-[100%] object-cover h-[100%]" />
+                            </div>
+                          ) : post.content.type === "youtube" ? (
+                            <div className=" search-youtube">{post.content.link}</div>
+                          ) : null}
+                          <div className=" space-y-1">
+                            <h1 className=" font-medium text-sky-500">#/{post.community}</h1>
+                            <h1 className=" font-medium text-lg">{post.title}</h1>
+                            <p className="line-clamp-1">{post.description}</p>
+                            <p className=" text-[#64748b] text-xs ">
+                              {" "}
+                              <FontAwesomeIcon icon={faComment} /> <span className="">{post.comments} </span> <span className="">comments</span>{" "}
+                            </p>
+                          </div>
+                        </div>
+                      ))}
                   </div>
                 </div>
               </div>
@@ -215,21 +219,28 @@ export default function Navbar({ setSidebar, sidebar }) {
               leaveFrom="transform scale-100 opacity-100"
               leaveTo="transform scale-95 opacity-0"
             >
-              <Popover.Panel className="absolute shadow-xl rounded-[10px] overflow-hidden lg:-right-[10%] lg:translate-x-[10%] z-[888] md:w-[400px] w-[350px] right-[0%] translate-x-0 ">
+              <Popover.Panel className="absolute border border-gray-200 shadow-xl rounded-[10px] overflow-hidden lg:-right-[10%] lg:translate-x-[10%] z-[888] md:w-[400px] w-[350px] right-[0%] translate-x-0 ">
                 <div className="     bg-white">
                   <ul className=" w-full">
-                    {Notification.map((item) => (
-                      <li className=" flex gap-2 p-4 border-b">
-                        <img src={item.avatar} alt="" className="w-[40px] h-[40px]" />
-                        <div className=" ">
-                          <h1 className=" font-medium text-sm text-sky-500">{item.name}</h1>
-                          <p className=" text-sm font-medium text-[#414d54]">
-                            {item.liked ? `liked \ "${item.postTitle}"` : item.disliked ? `disliked "${item.postTitle}"` : "started following you"}{" "}
-                          </p>
-                          <p className=" text-xs font-medium text-[#9597A1]">{item.date}</p>
-                        </div>
-                      </li>
-                    ))}
+                    {posts
+                      .filter((filterpost, index) => index <= 4)
+                      .map((item) => (
+                        <li className=" flex gap-2 p-4 border-b w-full">
+                          <img src={item.avatar} alt="" className="w-[40px] rounded-full h-[40px]" />
+                          <div className=" space-y-1 ">
+                            <h1 className=" font-medium text-sm text-sky-500">#/{item.community}</h1>
+                            <p className=" text-sm font-medium text-[#414d54]">has posted `{item.title}`</p>
+                            <div className=" flex items-center gap-2">
+                              <p className=" text-xs font-medium text-[#9597A1]">{item.date}</p>
+                              <button className=" flex items-center gap-1 text-xs">
+                                <FontAwesomeIcon icon={faComment} />
+                                <span className="">{item.comments}</span>
+                                <span className="">comments</span>
+                              </button>
+                            </div>
+                          </div>
+                        </li>
+                      ))}
                   </ul>
                   <button className=" font-medium text-center mx-auto block text-xs py-4 text-[#9597A1]">Load more</button>
                 </div>
@@ -245,7 +256,7 @@ export default function Navbar({ setSidebar, sidebar }) {
                     <img src="/ellipse.png" alt="" className=" w-full h-full" />
                   </div>
                   <div className=" flex items-center space-x-2">
-                    <h1 className=" font-medium ">Peter Griffin</h1>
+                    <h1 className=" font-medium ">#/Peter Griffin</h1>
                     <FontAwesomeIcon icon={faChevronDown} className=" text-slate-400" />
                   </div>
                 </div>
@@ -266,7 +277,7 @@ export default function Navbar({ setSidebar, sidebar }) {
                         <img src="/ellipse.png" alt="" className=" w-full h-full" />
                       </div>
                       <div className=" w-full">
-                        <h1 className=" font-medium text-2xl">Peter Griffin</h1>
+                        <h1 className=" font-medium text-2xl">#/Peter Griffin</h1>
                         <p className=" text-[#9597A1]">Musician</p>
                       </div>
                     </div>

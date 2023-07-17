@@ -151,7 +151,7 @@ export default function RightSidebar() {
                           </Link>
                           <Link href={`/community/${community}`}>
                             {" "}
-                            <h6 className=" font-medium text-md text-slate-600">{person.community}</h6>
+                            <h6 className=" font-medium text-md text-slate-600">#/{person.community}</h6>
                           </Link>
                         </div>
                         <button className=" font-medium rounded-full hover:bg-[black] text-[black] hover:text-white text-xs border-black px-4 py-1 border">

@@ -174,7 +174,7 @@ export default function CreatePost() {
             <span className=" md:order-2 order-2">OR</span>
             <button
               onClick={() => setFormType("community")}
-              className=" px-6 py-3  min-w-[max-content] font-medium border border-black text-black text-sm  bg-black text-white uppercase space-x-1 rounded-full"
+              className=" px-6 py-3  min-w-[max-content] font-medium border border-black md:order-3 order-1 text-sm  bg-black text-white uppercase space-x-1 rounded-full"
             >
               {" "}
               <FontAwesomeIcon icon={faAdd} /> <span className="">create Community</span>

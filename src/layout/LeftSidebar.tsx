@@ -82,14 +82,17 @@ export default function LeftSidebar({ sidebaractive }) {
     {
       name: "Home",
       icon: <FontAwesomeIcon className=" text-md" icon={faHome} />,
+      href:"/"
     },
     {
       name: "Trending",
       icon: <FontAwesomeIcon className=" text-md" icon={faFire} />,
+      href:"/"
     },
     {
       name: "News Feed",
       icon: <FontAwesomeIcon className=" text-md" icon={faNewspaper} />,
+      href:"/"
     },
   ];
 
@@ -151,9 +154,9 @@ export default function LeftSidebar({ sidebaractive }) {
       }`}
     >
       <div className=" flex lg:hidden items-center space-x-2  py-4 border-b mb-4 ">
-        <div className=" min-w-[40px] h-[40px]">
+        <Link href="/" className=" min-w-[40px] h-[40px]">
           <img src="/ellipse.png" alt="" className=" w-full h-full" />
-        </div>
+        </Link>
         <div className=" flex items-center space-x-2 w-full justify-between">
           <h1 className=" font-medium ">Peter Griffin</h1>
           <FontAwesomeIcon icon={faChevronRight} className=" text-slate-400" />
@@ -206,10 +209,10 @@ export default function LeftSidebar({ sidebaractive }) {
 
       <div className=" w-full flex flex-col  pb-4  border-b border-[#E6F0F2]">
         <h1 className=" text-sm font-medium text-slate-400 mb-2">FEEDS</h1>
-        {sidebar.map((bar) => (
-          <Link className=" text-slate-600 w-full  border-slate-100 gap-2 py-1 flex items-center" href="">
+        {sidebar.map((barlinks) => (
+          <Link className=" text-slate-600 w-full  border-slate-100 gap-2 py-1 flex items-center" href={barlinks.href}>
             {" "}
-            <span className="w-[30px]  flex items-center justify-center">{bar.icon}</span> <span className="  text-md">{bar.name}</span>{" "}
+            <span className="w-[30px]  flex items-center justify-center">{barlinks.icon}</span> <span className="  text-md">{barlinks.name}</span>{" "}
           </Link>
         ))}
       </div>

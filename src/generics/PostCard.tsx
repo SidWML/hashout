@@ -123,11 +123,11 @@ export default function PostCard({ post, socialMedia, view }) {
             </Link>
             <div className=" flex items-center gap-2">
               <Link href={`/community/${post.community}`} className=" block">
-                <h6 className="py-1.5 px-4 rounded-full bg-[#f5f5f5] font-bold text-sky-500  text-sm">#/{post.community}</h6>
+                <h6 className="py-1.5 px-4 rounded-full bg-[#f5f5f5] md:text-base font-bold text-sky-500  text-xs">#/{post.community}</h6>
               </Link>
 
               <span className=" text-xs md:block hidden text-[#9597A1]  font-medium "> posted by {post.name}</span>
-              <span className=" text-xs bg-sky-100 text-slate-500 px-2 py-1 rounded-full  font-medium ">{post.date}</span>
+              <span className=" md:text-xs text-[10px] bg-sky-100 text-slate-500 px-2 py-1 rounded-full  font-medium ">{post.date}</span>
             </div>
             <button className="px-4 py-1 ml-auto border border-black rounded-full font-medium text-xs">JOIN</button>
           </div>
