@@ -39,7 +39,7 @@ export default function PostDetailPage() {
   const { slug } = router.query;
 
   const [comments, setComments] = useState(true);
-  const [showReplies, setshowReplies] = useState(true);
+
 
   return (
     <div className="">
@@ -55,7 +55,7 @@ export default function PostDetailPage() {
           <div style={{ boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.02)" }} className=" border   w-full bg-white block rounded-[10px] ">
             <div className=" gap-2 flex items-center border-b p-4   ">
               <Link href={`/community/${post.community}`} className="">
-                <img src={post.avatar} alt="" className=" max-w-[30px]  rounded-full h-[20px] h-[30px]" />
+                <img src={post.avatar} alt="" className=" max-w-[30px]  rounded-full  h-[30px]" />
               </Link>
               <div className=" flex items-center gap-2">
                 <Link href={`/community/${post.community}`} className=" block">
@@ -127,14 +127,13 @@ export default function PostDetailPage() {
                     <Button label="comment" />
                   </div>
                   {comments && (
-                    <div className=" w-full mt-4 ">
-                      {post.commentsArray.map((comment) => (
-                        <div>
-                          <Comment showReplies={showReplies} setshowReplies={setshowReplies} post={post} comment={comment} />
-                          {comment.replies?.map((reply) => (
-                            <Reply showReplies={showReplies} setshowReplies={setshowReplies} reply={reply} post={post} />
-                          ))}
-                        </div>
+                    <div className="w-full mt-4">
+                      {post.commentsArray.map((comment,index) => (
+                        <Comment
+                          key={index}
+                          post={post}
+                          comment={comment}
+                        />
                       ))}
                     </div>
                   )}

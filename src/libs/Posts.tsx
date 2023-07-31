@@ -24,16 +24,137 @@ export const posts = [
             name: "Reply1",
             avatar: "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/aa/aa6879d9caa0c5c68d3f1468e90a8e241316b1d4_full.jpg",
             comment: "I tried this recipe yesterday, and it turned out fantastic!",
+            replies: [
+              {
+                name: "Reply11",
+                avatar: "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/03/034b08d45c0dd40494c0810705824b085b2aa4a6_full.jpg",
+                comment: "Glad you liked it! I'm making it again this weekend.",
+                replies: [
+                  {
+                    name: "Reply111",
+                    avatar: "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/3e/3e1e7874c280db1ae99925ef333217447426ff0c_full.jpg",
+                    comment: "I can't wait to try it too! Thanks for sharing the recipe.",
+                    replies: [
+                      {
+                        name: "Reply1111",
+                        avatar: "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/8f/8f92f1a97554815d8f2d611a3e02003be6f3dde5_full.jpg",
+                        comment: "I tried it, and it's now my favorite cake recipe ever!",
+                        replies: [
+                          {
+                            name: "Reply11111",
+                            avatar: "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/7f/7f0d88138457b7ffb3af8dd7609ce40aeec87dac_full.jpg",
+                            comment: "I made it for my friend's party, and everyone loved it!",
+                            replies: [
+                              {
+                                name: "Reply111111-1",
+                                avatar: "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/7f/7f0d88138457b7ffb3af8dd7609ce40aeec87dac_full.jpg",
+                                comment: "I made it for my friend's party, and everyone loved it!",
+                                
+                              },
+                            ],
+                          },
+                        ],
+                      },
+                    ],
+                  },
+                  {
+                    name: "Reply111111-1",
+                    avatar: "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/7f/7f0d88138457b7ffb3af8dd7609ce40aeec87dac_full.jpg",
+                    comment: "I made it for my friend's party, and everyone loved it!",
+                    
+                  },
+                ],
+              }
+            ]
           },
           {
             name: "Reply2",
             avatar: "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/8f/8f92f1a97554815d8f2d611a3e02003be6f3dde5_full.jpg",
             comment: "I'm going to bake this cake for my friend's birthday. Thanks for sharing!",
+            replies: [
+              {
+                name: "Reply11",
+                avatar: "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/03/034b08d45c0dd40494c0810705824b085b2aa4a6_full.jpg",
+                comment: "Glad you liked it! I'm making it again this weekend.",
+                replies: [
+                  {
+                    name: "Reply111",
+                    avatar: "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/3e/3e1e7874c280db1ae99925ef333217447426ff0c_full.jpg",
+                    comment: "I can't wait to try it too! Thanks for sharing the recipe.",
+                    replies: [
+                      {
+                        name: "Reply1111",
+                        avatar: "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/8f/8f92f1a97554815d8f2d611a3e02003be6f3dde5_full.jpg",
+                        comment: "I tried it, and it's now my favorite cake recipe ever!",
+                        replies: [
+                          {
+                            name: "Reply11111",
+                            avatar: "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/7f/7f0d88138457b7ffb3af8dd7609ce40aeec87dac_full.jpg",
+                            comment: "I made it for my friend's party, and everyone loved it!",
+                            replies: [
+                              {
+                                name: "Reply111111",
+                                avatar: "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/7f/7f0d88138457b7ffb3af8dd7609ce40aeec87dac_full.jpg",
+                                comment: "I made it for my friend's party, and everyone loved it!",
+                                replies: [
+                                  {
+                                    name: "Reply111111",
+                                    avatar: "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/7f/7f0d88138457b7ffb3af8dd7609ce40aeec87dac_full.jpg",
+                                    comment: "I made it for my friend's party, and everyone loved it!",
+                                    replies: [
+                                      {
+                                        name: "Reply111111-1",
+                                        avatar: "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/7f/7f0d88138457b7ffb3af8dd7609ce40aeec87dac_full.jpg",
+                                        comment: "I made it for my friend's party, and everyone loved it!",
+                                        
+                                      },
+                                    ],
+                                    
+                                  },
+                                ],
+                              },
+                            ],
+                          },
+                        ],
+                      },
+                    ],
+                  },
+                ],
+              }
+            ]
           },
           {
             name: "Reply3",
             avatar: "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/7f/7f0d88138457b7ffb3af8dd7609ce40aeec87dac_full.jpg",
             comment: "This recipe is a game-changer. The cake was a hit at my family gathering.",
+            replies: [
+              {
+                name: "Reply11",
+                avatar: "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/03/034b08d45c0dd40494c0810705824b085b2aa4a6_full.jpg",
+                comment: "Glad you liked it! I'm making it again this weekend.",
+                replies: [
+                  {
+                    name: "Reply111",
+                    avatar: "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/3e/3e1e7874c280db1ae99925ef333217447426ff0c_full.jpg",
+                    comment: "I can't wait to try it too! Thanks for sharing the recipe.",
+                    replies: [
+                      {
+                        name: "Reply1111",
+                        avatar: "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/8f/8f92f1a97554815d8f2d611a3e02003be6f3dde5_full.jpg",
+                        comment: "I tried it, and it's now my favorite cake recipe ever!",
+                        replies: [
+                          {
+                            name: "Reply11111",
+                            avatar: "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/7f/7f0d88138457b7ffb3af8dd7609ce40aeec87dac_full.jpg",
+                            comment: "I made it for my friend's party, and everyone loved it!",
+                          },
+                        ],
+                      },
+                    ],
+                  },
+                ],
+              }
+            ]
           },
         ],
       },
@@ -46,16 +167,100 @@ export const posts = [
             name: "Reply1",
             avatar: "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/aa/aa6879d9caa0c5c68d3f1468e90a8e241316b1d4_full.jpg",
             comment: "I tried this recipe yesterday, and it turned out fantastic!",
+            replies: [
+              {
+                name: "Reply11",
+                avatar: "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/03/034b08d45c0dd40494c0810705824b085b2aa4a6_full.jpg",
+                comment: "Glad you liked it! I'm making it again this weekend.",
+                replies: [
+                  {
+                    name: "Reply111",
+                    avatar: "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/3e/3e1e7874c280db1ae99925ef333217447426ff0c_full.jpg",
+                    comment: "I can't wait to try it too! Thanks for sharing the recipe.",
+                    replies: [
+                      {
+                        name: "Reply1111",
+                        avatar: "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/8f/8f92f1a97554815d8f2d611a3e02003be6f3dde5_full.jpg",
+                        comment: "I tried it, and it's now my favorite cake recipe ever!",
+                        replies: [
+                          {
+                            name: "Reply11111",
+                            avatar: "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/7f/7f0d88138457b7ffb3af8dd7609ce40aeec87dac_full.jpg",
+                            comment: "I made it for my friend's party, and everyone loved it!",
+                          },
+                        ],
+                      },
+                    ],
+                  },
+                ],
+              }
+            ]
           },
           {
             name: "Reply2",
             avatar: "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/8f/8f92f1a97554815d8f2d611a3e02003be6f3dde5_full.jpg",
             comment: "I'm going to bake this cake for my friend's birthday. Thanks for sharing!",
+            replies: [
+              {
+                name: "Reply11",
+                avatar: "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/03/034b08d45c0dd40494c0810705824b085b2aa4a6_full.jpg",
+                comment: "Glad you liked it! I'm making it again this weekend.",
+                replies: [
+                  {
+                    name: "Reply111",
+                    avatar: "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/3e/3e1e7874c280db1ae99925ef333217447426ff0c_full.jpg",
+                    comment: "I can't wait to try it too! Thanks for sharing the recipe.",
+                    replies: [
+                      {
+                        name: "Reply1111",
+                        avatar: "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/8f/8f92f1a97554815d8f2d611a3e02003be6f3dde5_full.jpg",
+                        comment: "I tried it, and it's now my favorite cake recipe ever!",
+                        replies: [
+                          {
+                            name: "Reply11111",
+                            avatar: "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/7f/7f0d88138457b7ffb3af8dd7609ce40aeec87dac_full.jpg",
+                            comment: "I made it for my friend's party, and everyone loved it!",
+                          },
+                        ],
+                      },
+                    ],
+                  },
+                ],
+              }
+            ]
           },
           {
             name: "Reply3",
             avatar: "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/7f/7f0d88138457b7ffb3af8dd7609ce40aeec87dac_full.jpg",
             comment: "This recipe is a game-changer. The cake was a hit at my family gathering.",
+            replies: [
+              {
+                name: "Reply11",
+                avatar: "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/03/034b08d45c0dd40494c0810705824b085b2aa4a6_full.jpg",
+                comment: "Glad you liked it! I'm making it again this weekend.",
+                replies: [
+                  {
+                    name: "Reply111",
+                    avatar: "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/3e/3e1e7874c280db1ae99925ef333217447426ff0c_full.jpg",
+                    comment: "I can't wait to try it too! Thanks for sharing the recipe.",
+                    replies: [
+                      {
+                        name: "Reply1111",
+                        avatar: "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/8f/8f92f1a97554815d8f2d611a3e02003be6f3dde5_full.jpg",
+                        comment: "I tried it, and it's now my favorite cake recipe ever!",
+                        replies: [
+                          {
+                            name: "Reply11111",
+                            avatar: "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/7f/7f0d88138457b7ffb3af8dd7609ce40aeec87dac_full.jpg",
+                            comment: "I made it for my friend's party, and everyone loved it!",
+                          },
+                        ],
+                      },
+                    ],
+                  },
+                ],
+              }
+            ]
           },
         ],
       },

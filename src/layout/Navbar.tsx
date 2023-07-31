@@ -219,7 +219,7 @@ export default function Navbar({ setSidebar, sidebar }) {
               leaveFrom="transform scale-100 opacity-100"
               leaveTo="transform scale-95 opacity-0"
             >
-              <Popover.Panel className="absolute border border-gray-200 shadow-xl rounded-[10px] overflow-hidden lg:-right-[10%] lg:translate-x-[10%] z-[888] md:w-[400px] w-[350px] right-[0%] translate-x-0 ">
+              <Popover.Panel className="absolute border border-gray-200 shadow-xl rounded-[10px] overflow-hidden lg:-right-[10%] lg:translate-x-[10%] z-[888] md:w-[400px] w-[350px] right-[-120px] translate-x-0 ">
                 <div className="     bg-white">
                   <ul className=" w-full">
                     {posts
