@@ -9,7 +9,7 @@ export default function Comment({ comment, post }) {
   const [showReplies, setshowReplies] = useState(false);
   return (
     <div className=" w-full relative rounded-b-2xl mt-4 ">
-      <div className=" absolute md:block hidden bottom-0 w-[2px] h-[70.30%] top-[20px] bg-[#e5e7eb]  left-[8px]"></div>
+      <div className=" absolute md:block hidden bottom-0 w-[2px] h-[100%]  top-[20px] bg-[#e5e7eb]  left-[8px]"></div>
       <div className=" pt-2 relative flex items-center gap-2 w-full">
         <img src={comment.avatar} alt="" className=" w-[20px] h-[20px] rounded-full" />
         <h1 className=" md:font-medium md:text-md text-sm font-normal py-1.5  text-sky-500">#/{comment.name}</h1>
