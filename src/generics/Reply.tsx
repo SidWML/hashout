@@ -23,7 +23,7 @@ export default function Reply({ reply, post, }) {
       </div>
       <div className="md:pl-2 pl-1 mt-[-2px]">
         <div className="p-4 space-y-3 gap-2 bg-[#f5f5f5] w-full md:border-l rounded-bl-2xl">
-          <p>{reply.comment}</p>
+          <p className="md:text-base text-xs ">{reply.comment}</p>
           <div className="flex flex-wrap items-center gap-4">
           <div className=" text-slate-600 flex items-center gap-2">
               <FontAwesomeIcon icon={faArrowCircleUp} />
