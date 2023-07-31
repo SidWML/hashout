@@ -6,16 +6,16 @@ import Reply from "./Reply";
 
 export default function Comment({ comment, post }) {
   const [commentinput, setCommentinput] = useState(false);
-  const [showReplies, setshowReplies] = useState(true);
+  const [showReplies, setshowReplies] = useState(false);
   return (
     <div className=" w-full relative rounded-b-2xl mt-4 ">
-      <div className=" absolute  bottom-0 w-[3px] h-[99.30%] top-[20px] bg-[#e5e7eb]  left-[8px]"></div>
+      <div className=" absolute md:block hidden bottom-0 w-[2px] h-[70.30%] top-[20px] bg-[#e5e7eb]  left-[8px]"></div>
       <div className=" pt-2 relative flex items-center gap-2 w-full">
         <img src={comment.avatar} alt="" className=" w-[20px] h-[20px] rounded-full" />
         <h1 className=" md:font-medium md:text-md text-sm font-normal py-1.5  text-sky-500">#/{comment.name}</h1>
       </div>
       <div className="pl-2 ">
-        <div className="p-4  space-y-3 gap-2 bg-[#f5f5f5] w-full border-l-2 rounded-bl-2xl">
+        <div className="p-4  space-y-3 gap-2 bg-[#f5f5f5] w-full border-l rounded-bl-2xl">
           <p className="">{comment.comment}</p>
           <div className=" flex items-center gap-4">
             <div className=" text-slate-600 flex items-center gap-2">
@@ -26,7 +26,7 @@ export default function Comment({ comment, post }) {
             <button onClick={() => setCommentinput(!commentinput)} className="">
               reply
             </button>
-            <div onClick={() => setshowReplies(!showReplies)} className=" flex items-center space-x-1 bg-[#f5f5f5] cursor-pointer ">
+            <div onClick={() => setshowReplies((prev) => !prev)} className=" flex items-center space-x-1 bg-[#f5f5f5] cursor-pointer ">
               <span className=" text-xs rounded-full flex items-center justify-center border border-black w-[15px] h-[15px]">
                 {comment.replies?.length}
               </span>{" "}

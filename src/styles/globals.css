@@ -15,7 +15,7 @@ body{
 
 .text.full{
     overflow:visible;
-    max-height: 3000px;
+    max-height: 5000px;
     transition: max-height 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 iframe {
