@@ -15,7 +15,7 @@ export default function Comment({ comment, post }) {
         <h1 className=" md:font-medium md:text-md text-sm font-normal py-1.5  text-sky-500">#/{comment.name}</h1>
       </div>
       <div className="pl-2 ">
-        <div className="p-4  space-y-3 gap-2 bg-[#f5f5f5] w-full border-l rounded-bl-2xl">
+        <div className="p-4  space-y-3 gap-2 bg-[#f8f8f8] w-full border-l rounded-bl-2xl">
           <p className="">{comment.comment}</p>
           <div className=" flex items-center gap-4">
             <div className=" text-slate-600 flex items-center gap-2">
