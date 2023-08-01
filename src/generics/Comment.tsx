@@ -10,6 +10,7 @@ export default function Comment({ comment, post }) {
   return (
     <div className=" w-full relative rounded-b-2xl mt-4 ">
       {/* <div className=" absolute md:block hidden bottom-0 w-[2px] h-[100%]  top-[20px] bg-[#e5e7eb]  left-[8px]"></div> */}
+      <div className=" absolute w-[1px] h-[20px] rotate-180  bg-[#e5e7eb] rounded-full left-[8px] md:left-[8px] top-[30px]"></div> 
       <div className=" pt-2 relative flex items-center gap-2 w-full">
         <img src={comment.avatar} alt="" className=" w-[20px] h-[20px] rounded-full" />
         <h1 className=" md:font-medium md:text-md text-sm font-normal py-1.5  text-sky-500">#/{comment.name}</h1>
@@ -47,7 +48,7 @@ export default function Comment({ comment, post }) {
           )}
         </div>
       </div>
-        <div className={` md:pl-2 pl-3 text ${showReplies ? " full " : " "}"`}>
+        <div className={` md:pl-2 pl-2 text ${showReplies ? " full " : " "}"`}>
           {comment.replies.map((reply, index) => (
             <Reply
               key={reply.id} 
