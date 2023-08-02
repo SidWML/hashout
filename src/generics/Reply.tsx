@@ -13,10 +13,10 @@ export default function Reply({ reply, post, }) {
   }
 
   return (
-    <div className={` ${showReplies ? " full md:-mt-[4px] -mt-[14px] " : " h-[0px]"} duration-300 ease-linear text border-l md:pl-2.5 pl-1.5 pt-1 z-[5] relative md:ml-4  `}>
+    <div className={` ${showReplies ? " full md:-mt-[4px] -mt-[14px] " : " h-[0px]"} duration-300 ease-linear text border-l md:pl-2.5 pl-2.5 pt-1 z-[5] relative md:ml-4  `}>
       <div onClick={() => setshowReplies(!showReplies)} className=" absolute w-[15px] flex items-center justify-center z-[1000] h-[15px]   bg-gray-300 rounded-full left-[-08px] top-[23px]">{ showReplies ? " - " : " + " } </div>
       <div className=" absolute w-[20px] h-[2px] bg-gray-300 rounded-full left-[0px] top-[30px] md:top-[30px]"></div> 
-      <div className=" absolute w-[1px] h-[20px] rotate-180  bg-[#e5e7eb] rounded-full left-[10px] md:left-[14px] top-[40px]"></div> 
+      <div className=" absolute w-[1px] h-[20px] rotate-180  bg-[#e5e7eb] rounded-full left-[14px] top-[40px]"></div> 
       <div className="w-full ">
       <div className="pt-2 relative flex items-center gap-2 w-full">
         <img src={reply.avatar} alt="" className="w-[20px] h-[20px] rounded-full" />

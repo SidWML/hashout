@@ -10,7 +10,7 @@ export const poppins = Poppins({weight:["100","200","300","400","500","600","700
 export default function Home() {
   return (
     <main
-      className={`${poppins.className}`}
+      className={`${poppins.className} `}
     >
       <HashoutLayout poppins={poppins.className} >
         <Homepage />

@@ -24,6 +24,7 @@ export default function Login() {
             <div className="w-full flex items-center justify-center  min-h-[90vh]  md:py-0 py-[60px]">
               <div className=" overflow-hidden    rounded-3xl  w-full ">
                 <div className="  p-6 space-y-8">
+                  <h1 className=" w-full text-center font-semibold text-3xl ">#HASHOUT</h1>
                   <div className=" text-center font-medium space-y-3">
                     <h1 className=" font-bold md:text-3xl text-xl font-rosario w-full text-center">Welcome Back </h1>
                   </div>
